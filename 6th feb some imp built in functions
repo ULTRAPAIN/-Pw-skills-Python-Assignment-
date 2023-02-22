@@ -1,0 +1,30 @@
+The function then uses the re.findall() method to count the number of uppercase letters, lowercase letters, digits, and special characters in the password using regular expressions. The regular expressions used are:
+
+[A-Z]: matches any uppercase letter
+[a-z]: matches any lowercase letter
+\d: matches any digit
+[^\w\s]: matches any character that is not alphanumeric or whitespace
+
+first we will need to import re module for using findall method 
+
+example :- 
+
+    upper_count = len(re.findall(r'[A-Z]', password))
+    lower_count = len(re.findall(r'[a-z]', password))
+    digit_count = len(re.findall(r'\d', password))
+    special_count = len(re.findall(r'[^\w\s]', password))
+    
+    
+ isinstance is a built-in Python function that returns True if an object is an instance of a specified class or of a subclass of that class. It returns False otherwise.
+
+The syntax for using isinstance is as follows:
+
+isinstance(object, classinfo)
+
+
+Here, object is the object you want to check, and classinfo can be a class or a tuple of classes.
+If object is an instance of any of the classes in classinfo, isinstance returns True. If not, it returns False.
+
+In the context of the previous functions I provided, isinstance is used to check whether an element 
+in a list is an integer or a float, by passing the element as the object argument and (int, float) as the classinfo argument. 
+This is a simple and effective way to filter out non-numeric values from a list.
